@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --primary-color: #4b0c67;
+  --primary-100: #ddae18;
+  --primary-200: #fefefe;
+  --primary-300: #d9d9d9;
+  --primary-400: #d681fc;
+  --dark-main: #1e1e1e;
+  --neutral-100: #666666;
+  --neutral-200: #fff;
+  --neutral-300: #c9c9c9;
+  --neutral-400: #3c4242;
+  --neutral-500: #c9c9c9;
+}
+
+.container {
+  max-width: 1313px;
+  width: cal(100% - 0rem);
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1140px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.scroll {
+  /* position: relative;
+  width: 100vw;
+  background-color: $boxify-bg-light-dark;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0;
+  padding: 0; */
+  top: 0;
+
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+
+  -webkit-transition: all ease-in 1s;
+  -moz-transition: all ease-in 1s;
+  -o-transition: all ease-in 1s;
+  -ms-transition: all ease-in 1s;
+  transition: all ease-in 1s;
+}
+
+.m-scroll {
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+  animation: scrollText 10s infinite linear;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+}
+
+span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.separator {
+  width: 50%;
+  height: 1px;
+  background-color: #f00; /* Adjust color as needed */
+  margin: 10px 0; /* Adjust margin as needed */
+}
