@@ -1,15 +1,14 @@
 import React, { PropsWithChildren, useEffect } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Dashboard from '../views/Dashboard';
-// import GetStarted from '../views/Dashboard/Onboarding/GetStarted';
 import ForgotPassword from '../views/Auth/ForgotPassword';
 import Login from '../views/Auth/Login';
 import ResetPassword from '../views/Auth/ResetPassword';
 import Signup from '../views/Auth/SignUp'
 import Overview from '../views/Dashboard/Overview';
-import Appointment from '../views/Dashboard/SaloonAndSpa/Appointment';
-import Payment from '../views/Dashboard/SaloonAndSpa/Payment';
-import Update from '../views/Dashboard/SaloonAndSpa/Update';
+import Appointment from '../views/Dashboard/SalonAndSpa/Appointment';
+import Payment from '../views/Dashboard/SalonAndSpa/Payment';
+import Update from '../views/Dashboard/SalonAndSpa/Update';
 import { useRedirect } from '../hooks';
 
 
@@ -43,6 +42,7 @@ export const AppRouter = () => {
         <Route path={UPDATE_SERVICES} element={< Update/>} />
         {/* {put other links here} */}
       </Route>
+      
       <Route path={LOGIN} element={<Login />} />
       <Route path={FORGOT_PASSWORD} element={<ForgotPassword />} />
       <Route path={RESET_PASSWORD} element={<ResetPassword />} />

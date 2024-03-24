@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { DownArrowIcon, UpArrowIcon } from './constants'; 
 
 interface DropdownItem {
@@ -16,10 +16,13 @@ interface DropdownProps {
 
 const Dropdown: React.FC<DropdownProps> = ({ icon: Icon, title, items }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const navigate = useNavigate();
 
-  const handleItemClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    event.preventDefault();
-  };
+  // const handleItemClick = (item: DropdownItem) => {
+  //   console.log('Item clicked:', item);
+  //   navigate(item.link);
+  //   console.log('Moving to:', item.link);
+  // };
 
   return (
     <div className='' >
@@ -37,10 +40,9 @@ const Dropdown: React.FC<DropdownProps> = ({ icon: Icon, title, items }) => {
             
             <NavLink 
             to={item.link}
+            target='_self'
              className=" flex flex-col my-5 pl-[20px] py-[10px] shadow-[0px_1px_0px_0px_rgba(18_32_59_0.09)] border-solid border-b border-[#E4E4E7] text-[#4B0C67] bg-[#F8F8F8] text-[16px] font-medium rounded-[10px] " 
              key={item.id}
-             onClick={handleItemClick} 
-            
              >
               {item.text}
             </NavLink>
