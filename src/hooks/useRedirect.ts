@@ -16,5 +16,5 @@ export const useRedirect = () => {
     // ) {
       navigate('/');
     // }
-  }, [location.pathname, navigate, token]);
+  }, [location.pathname, token]);
 };

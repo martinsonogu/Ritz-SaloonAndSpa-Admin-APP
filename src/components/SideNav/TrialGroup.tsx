@@ -16,14 +16,6 @@ interface DropdownProps {
 
 const Dropdown: React.FC<DropdownProps> = ({ icon: Icon, title, items }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const navigate = useNavigate();
-
-  // const handleItemClick = (item: DropdownItem) => {
-  //   console.log('Item clicked:', item);
-  //   navigate(item.link);
-  //   console.log('Moving to:', item.link);
-  // };
-
   return (
     <div className='' >
       <div className="flex flex-row items-center p-[10px] text-[#4B0C67] bg-[#4B0C67] text-[18px] font-bold rounded-[10px]" onClick={() => setIsActive(!isActive)}>
