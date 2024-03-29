@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^3.3.4",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-toastify": "^4.1.0",
+    "axios": "^1.6.8",
     "browser-image-compression": "^2.0.2",
     "date-fns": "^3.4.0",
     "dayjs": "^1.11.10",
