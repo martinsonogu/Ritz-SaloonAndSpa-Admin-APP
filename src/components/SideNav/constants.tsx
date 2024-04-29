@@ -1,11 +1,10 @@
-import clsx from 'clsx';
-import { NavLink } from 'react-router-dom';
-import { PRIVATE_PATHS } from '../../routes/paths';
-import Button, { inlineButtonClass } from '../Button';
-import { NavLinkItemPropsType } from './NavLinkItem';
+import clsx from "clsx";
+import { NavLink } from "react-router-dom";
+import { PRIVATE_PATHS } from "../../routes/paths";
+import Button, { inlineButtonClass } from "../Button";
+import { NavLinkItemPropsType } from "./NavLinkItem";
 
-
-export const SaloonAndSpaIcon: React.FC<IconProps> = (props) =>(
+export const SaloonAndSpaIcon: React.FC<IconProps> = (props) => (
   <svg
     width={26}
     height={26}
@@ -163,13 +162,13 @@ export const SaloonAndSpaIcon: React.FC<IconProps> = (props) =>(
       strokeLinejoin="round"
     />
   </svg>
-)
+);
 
 export const ComingSoonTag = ({ className }: { className?: string }) => {
   return (
     <span
       className={clsx(
-        'text-[7px] border-[1px] flex flex-col items-center justify-center p-2 text-[#F04949] bg-[#FFF4F4] h-[17px] uppercase rounded-[35px]  border-solid border-[#F04949]',
+        "text-[7px] border-[1px] flex flex-col items-center justify-center p-2 text-[#F04949] bg-[#FFF4F4] h-[17px] uppercase rounded-[35px]  border-solid border-[#F04949]",
         className
       )}
     >
@@ -180,34 +179,32 @@ export const ComingSoonTag = ({ className }: { className?: string }) => {
 
 export const NavLinkList = [
   {
-    text: 'Saloon and Spa',
+    text: "Saloon and Spa",
     path: PRIVATE_PATHS.HOME,
-    icon: (
-      <SaloonAndSpaIcon/>
-    ),
+    icon: <SaloonAndSpaIcon />,
     isDropdown: true,
     renderChildren: () => (
       <>
         <NavLink
           to={PRIVATE_PATHS.HOME}
-          className='text-[#444] hover:text-[#6231F4] text-[12px] font-medium'
+          className="text-[#444] hover:text-[#6231F4] text-[12px] font-medium"
         >
           Appointments
         </NavLink>
         <NavLink
           to={PRIVATE_PATHS.HOME}
-          className='text-[#444] hover:text-[#6231F4] text-[12px] font-medium'
+          className="text-[#444] hover:text-[#6231F4] text-[12px] font-medium"
         >
           Payments
         </NavLink>
         <NavLink
           to={PRIVATE_PATHS.HOME}
-          className='text-[#444] hover:text-[#6231F4] text-[12px] font-medium'
+          className="text-[#444] hover:text-[#6231F4] text-[12px] font-medium"
         >
           Update Services
         </NavLink>
       </>
-    )
+    ),
   },
 ];
 export const DashboardNavLinkItemIcon: React.FC<IconProps> = (props) => (
@@ -228,7 +225,7 @@ export const DashboardNavLinkItemIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 interface IconProps {
-  fill?: string; 
+  fill?: string;
 }
 export const DownArrowIcon: React.FC<IconProps> = (props) => (
   <svg
@@ -257,13 +254,13 @@ export const UpArrowIcon: React.FC<IconProps> = (props) => (
   >
     <path
       d="M0.274961 10.668C0.450845 10.8437 0.689265 10.9424 0.937849 10.9424C1.18643 10.9424 1.42485 10.8437 1.60074 10.668L10.0057 2.26437L18.4106 10.6693C18.5876 10.8401 18.8246 10.9345 19.0705 10.9323C19.3165 10.93 19.5517 10.8313 19.7256 10.6573C19.8994 10.4833 19.9979 10.2479 20 10.002C20.002 9.75602 19.9073 9.51911 19.7364 9.34227L10.6686 0.274455C10.4927 0.0987883 10.2542 0.000120163 10.0057 0.000120163C9.75708 0.000120163 9.51866 0.0987883 9.34278 0.274455L0.274961 9.34227C0.187791 9.42938 0.118641 9.53282 0.071462 9.64667C0.0242829 9.76052 0 9.88255 0 10.0058C0 10.129 0.0242829 10.251 0.071462 10.3649C0.118641 10.4787 0.187791 10.5822 0.274961 10.6693"
-      fill="white" 
+      fill="white"
     />
   </svg>
-  );
+);
 
-  export const BlogIcon: React.FC<IconProps> = (props) => (
-    <svg
+export const BlogIcon: React.FC<IconProps> = (props) => (
+  <svg
     width={22}
     height={22}
     viewBox="0 0 22 22"
@@ -297,6 +294,24 @@ export const UpArrowIcon: React.FC<IconProps> = (props) => (
       strokeLinejoin="round"
     />
   </svg>
-  )
+);
 
-  
+export const NotificationIcon: React.FC<IconProps> = (props) => (
+  <svg
+    width={24}
+    height={25}
+    viewBox="0 0 24 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M21.6732 19.1801C21.0303 18.607 20.4675 17.9499 19.9999 17.2267C19.4894 16.2284 19.1834 15.1382 19.0999 14.0201V10.7267C19.1043 8.97047 18.4672 7.27304 17.3084 5.95337C16.1495 4.63371 14.5486 3.78263 12.8065 3.56006V2.70006C12.8065 2.46402 12.7128 2.23764 12.5459 2.07073C12.379 1.90383 12.1526 1.81006 11.9165 1.81006C11.6805 1.81006 11.4541 1.90383 11.2872 2.07073C11.1203 2.23764 11.0265 2.46402 11.0265 2.70006V3.57339C9.30004 3.81201 7.71852 4.66823 6.57489 5.98346C5.43126 7.2987 4.80302 8.98382 4.80654 10.7267V14.0201C4.72304 15.1382 4.41705 16.2284 3.90654 17.2267C3.44712 17.9483 2.89333 18.6052 2.25987 19.1801C2.18876 19.2425 2.13176 19.3194 2.09268 19.4056C2.0536 19.4919 2.03332 19.5854 2.0332 19.6801V20.5867C2.0332 20.7635 2.10344 20.9331 2.22847 21.0581C2.35349 21.1832 2.52306 21.2534 2.69987 21.2534H21.2332C21.41 21.2534 21.5796 21.1832 21.7046 21.0581C21.8296 20.9331 21.8999 20.7635 21.8999 20.5867V19.6801C21.8997 19.5854 21.8795 19.4919 21.8404 19.4056C21.8013 19.3194 21.7443 19.2425 21.6732 19.1801ZM3.41987 19.9201C4.04014 19.3209 4.58627 18.6494 5.04654 17.9201C5.68961 16.7144 6.06482 15.3841 6.14654 14.0201V10.7267C6.1201 9.94542 6.25115 9.16678 6.5319 8.43717C6.81265 7.70756 7.23734 7.04191 7.7807 6.47986C8.32406 5.9178 8.97496 5.47084 9.69466 5.16557C10.4144 4.86031 11.1881 4.703 11.9699 4.703C12.7516 4.703 13.5254 4.86031 14.2451 5.16557C14.9648 5.47084 15.6157 5.9178 16.159 6.47986C16.7024 7.04191 17.1271 7.70756 17.4078 8.43717C17.6886 9.16678 17.8196 9.94542 17.7932 10.7267V14.0201C17.8749 15.3841 18.2501 16.7144 18.8932 17.9201C19.3535 18.6494 19.8996 19.3209 20.5199 19.9201H3.41987Z"
+      fill="#FFA412"
+    />
+    <path
+      d="M11.9996 23.48C12.4195 23.4703 12.8225 23.3124 13.1373 23.0342C13.4521 22.7561 13.6583 22.3755 13.7196 21.96H10.2129C10.2759 22.3868 10.4918 22.7763 10.8204 23.0559C11.1491 23.3355 11.5681 23.4862 11.9996 23.48Z"
+      fill="#FFA412"
+    />
+  </svg>
+);

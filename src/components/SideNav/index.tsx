@@ -28,16 +28,12 @@ export const DashboardSideNav = () => {
   };
 
   return (
-    <div className="h-screen border-4 px-10 pt-9 ">
+    <div className=" h-full border-purple-600 bg-[#FFFFFF] border-4 px-10 pt-9 ">
       <div>
         <div className=" mb-20">
           <MainLogo />
         </div>
-        <NavLinkItem
-          path={PRIVATE_PATHS.OVERVIEW}
-          icon={DashboardNavLinkItemIcon}
-          text="Dashboard Overview"
-        />
+
         <NavLinkItem
           path={PRIVATE_PATHS.DASHBOARD}
           icon={DashboardNavLinkItemIcon}
@@ -67,24 +63,31 @@ export const DashboardSideNav = () => {
         />
       </div>
 
-      <div className=" w-full mt-[20px] pb-[30px]">
+      {/* other options */}
+      <div className="">
         <Button
-          className="bg-[#F8F8F8] w-full rounded-[6px] h-10"
-          //onClick={handleLogOut}
+          className="bg-[#F8F8F8] w-full rounded-[6px] px-3 py-3"
           name={
-            <span className=" text-[15px] flex items-center gap-[10px] px-3 text-[#4B0C67]  font-extrabold">
+            <span className="bg-transparent text-[15px] flex items-center gap-3 text-[#4B0C67]  font-extrabold">
               <BlogIcon />
               Blog
             </span>
           }
         />
-      </div>
-      <div className="border-solid border-t border-[#E4E4E7] w-full mt-[20px] pb-[30px]">
         <Button
-          className="bg-[#F8F8F8] w-full rounded-[6px] h-10"
+          className="bg-[#F8F8F8] w-full rounded-[6px] px-3 py-3"
+          name={
+            <span className=" text-[15px] flex items-center gap-3 text-[#4B0C67]  font-extrabold">
+              <BlogIcon />
+              General Settings
+            </span>
+          }
+        />
+        <Button
+          className="bg-[#F8F8F8] w-full rounded-[6px] px-3 py-3"
           onClick={handleLogOut}
           name={
-            <span className=" text-[15px] flex items-center gap-[10px] px-3 text-[#4B0C67]  font-extrabold">
+            <span className=" text-[15px] flex items-center gap-3 text-[#4B0C67]  font-extrabold">
               <FontAwesomeIcon
                 icon={faArrowRightFromBracket}
                 style={{ color: "#4B0C67" }}
