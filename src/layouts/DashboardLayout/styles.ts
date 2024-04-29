@@ -1,9 +1,9 @@
-import tw from 'tailwind-styled-components';
+import tw from "tailwind-styled-components";
 
 export const DashboardLayoutContainer = tw.div`
-h-screen
+h-full
 width-full
-min-h-full
+min-h-screen
 flex
 fade-in
 `;
