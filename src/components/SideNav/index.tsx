@@ -48,14 +48,14 @@ export const DashboardSideNav = () => {
           link: PRIVATE_PATHS.UPDATE_SERVICES,
         },
         {
-          id: 3,
+          id: 4,
           text: "Ritz Luxury Apartments",
           link: PRIVATE_PATHS.UPDATE_SERVICES,
         },
       ],
     },
     {
-      id: 1,
+      id: 2,
       title: "Saloon and Spa",
       icon: <SaloonAndSpaIcon />,
       items: [
@@ -76,7 +76,7 @@ export const DashboardSideNav = () => {
   };
 
   return (
-    <div className=" w-[30%] h-screen bg-[#FFFFFF] px-10 pt-9 ">
+    <div className=" w-[35%] h-full bg-[#FFFFFF] px-8 pt-9 ">
       <div className="mb-20">
         <MainLogo />
       </div>
@@ -90,6 +90,7 @@ export const DashboardSideNav = () => {
               title={item.title}
               items={item.items}
               initiallyActive={item.title === "Dashboard"}
+              key={item.id}
             />
           </div>
         ))}

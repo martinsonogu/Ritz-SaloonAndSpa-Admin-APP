@@ -4,6 +4,6 @@ export const DashboardLayoutContainer = tw.div`
 h-full
 width-full
 min-h-screen
-flex
+flex-1
 fade-in
 `;

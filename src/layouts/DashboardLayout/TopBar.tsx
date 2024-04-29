@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export const TopBar = () => {
   return (
-    <div className="w-full p-6 flex items-center justify-between bg-white">
+    <div className="w-full h-24 p-6 flex items-center justify-between bg-white">
       <div>
         <div className="bg-[#F4F4F4] w-full px-16 py-2 flex items-center justify-center rounded-xl">
           <FontAwesomeIcon icon={faSearch} />
