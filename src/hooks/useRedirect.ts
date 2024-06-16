@@ -11,7 +11,7 @@ export const useRedirect = () => {
     if (
       token &&
       !Object.values(PRIVATE_PATHS).includes(
-        location.pathname as typeof PRIVATE_PATHS.HOME
+        location.pathname as typeof PRIVATE_PATHS.OVERVIEW
       )
     ) {
       navigate("/");

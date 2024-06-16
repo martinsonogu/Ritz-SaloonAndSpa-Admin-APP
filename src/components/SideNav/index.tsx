@@ -41,7 +41,11 @@ export const DashboardSideNav = () => {
           text: "Ritz Portfolio",
           link: PRIVATE_PATHS.APPOINTMENTS,
         },
-        { id: 2, text: "Ritz Salon & Spa", link: PRIVATE_PATHS.PAYMENTS },
+        {
+          id: 2,
+          text: "Ritz Salon & Spa",
+          link: PRIVATE_PATHS.PAYMENTS
+        },
         {
           id: 3,
           text: "Ritz Luxury Gym",

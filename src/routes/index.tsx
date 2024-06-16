@@ -29,7 +29,7 @@ export const AppRouter = () => {
           </PrivateRoute>
         }
       >
-        {/* <Route index element={<Overview />} /> */}
+        <Route index element={<Overview />} />
         <Route path={OVERVIEW} element={<Overview />} />
         <Route path={APPOINTMENTS} element={<Appointment />} />
         <Route path={PAYMENTS} element={<Payment />} />
@@ -56,9 +56,10 @@ export const PrivateRoute: React.FC<PropsWithChildren> = ({ children }) => {
       // const accessToken = localStorage.getItem("key");
       if (!accessToken) {
         navigate(REGULAR_PATHS.LOGIN);
-      } else {
-        navigate(PRIVATE_PATHS.HOME);
       }
+      // else {
+      //   navigate(PRIVATE_PATHS.HOME);
+      // }
     };
 
     checkAccessToken();

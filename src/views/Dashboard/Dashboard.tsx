@@ -6,7 +6,6 @@ const Dashboard = () => {
   return (
     <DashboardLayout>
       <Outlet />
-      gell
     </DashboardLayout>
   );
 };
