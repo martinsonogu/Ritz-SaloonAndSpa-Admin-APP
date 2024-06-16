@@ -127,7 +127,7 @@ export const Signup = () => {
       const response = await mutateAsync(data); // Calling the mutateAsync function with the payload
       console.log(response);
       sessionStorage.setItem("TOKEN_KEY", response.token); // Storing token key in sessionStorage upon successful registration
-      // navigate("/login", { replace: true });
+      navigate("/login", { replace: true });
     } catch (error: any) {
       console.error("Registration error:", error);
       toast.error(error.message);

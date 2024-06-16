@@ -1,12 +1,7 @@
-import React from 'react'
-
+import React from "react";
 
 const Overview = () => {
-    return (
-       <div className="w-full">
-        this is the Overview Page
-       </div>
-    )
-}
+  return <div className="w-full">this is the Overview Page hdhdhd</div>;
+};
 
-export default Overview
+export default Overview;

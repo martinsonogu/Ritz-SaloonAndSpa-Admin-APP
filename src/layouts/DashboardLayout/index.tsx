@@ -11,13 +11,12 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   children,
 }) => {
   return (
-    <DashboardLayoutContainer className=" bg-[#f4f4f4]">
+    <DashboardLayoutContainer className=" w-full h-full flex bg-[#F4F4F4] ">
       <DashboardSideNav />
-      <div className="w-full h-full flex flex-col items-start overflow-auto gap-10">
-        {/* <TopBar /> */}
-        <div className="flex  flex-col py-[20px] w-full h-auto px-[40px]">
-          {children}
-        </div>
+      <div className="w-full flex flex-col items-start overflow-auto">
+        <TopBar />
+
+        <div className="flex-1 h-screen w-full py-5 px-10 ">{children}</div>
       </div>
     </DashboardLayoutContainer>
   );

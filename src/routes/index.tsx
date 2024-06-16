@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
-import Dashboard from "../views/Dashboard";
+import Dashboard from "../views/Dashboard/Dashboard";
 import ForgotPassword from "../views/Auth/ForgotPassword";
 import Login from "../views/Auth/Login";
 import ResetPassword from "../views/Auth/ResetPassword";
@@ -51,14 +51,15 @@ export const PrivateRoute: React.FC<PropsWithChildren> = ({ children }) => {
 
   useEffect(() => {
     const checkAccessToken = () => {
-      const accessToken = true;
-      //const accessToken = localStorage.getItem("key");
+      const accessToken = "34455";
 
+      // const accessToken = localStorage.getItem("key");
       if (!accessToken) {
         navigate(REGULAR_PATHS.LOGIN);
-      } else {
-        navigate(PRIVATE_PATHS.HOME);
       }
+      // else {
+      //   navigate(PRIVATE_PATHS.HOME);
+      // }
     };
 
     checkAccessToken();
