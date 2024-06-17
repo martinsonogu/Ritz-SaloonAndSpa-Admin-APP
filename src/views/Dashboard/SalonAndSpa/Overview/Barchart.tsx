@@ -1,79 +1,36 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, BarElement, LinearScale, CategoryScale, Tooltip, Legend, Title } from "chart.js"
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
-export default class Barchart extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/simple-bar-chart-72d7y5';
+const barChartData = {
+  labels: ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"],
+  datasets: [
+    {
+      label: "Daily revenue",
+      data: [1200, 300, 150, 180, 100, 250, 5000],
+      backgroundColor: ["rgba(255 99 132, 0.2"],
+      borderColor: ["rgba(96, 14, 133, 1"],
+      borderWidth: 1,
+    },
+  ],
+}
 
-  render() {
+const BarChart = () => {
+  const options = {}
+  
       return (
         <div className="w-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-          <Bar dataKey="uv" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
-        </BarChart>
-              </ResponsiveContainer>
-            </div>
+            <Bar options={options} data={barChartData} />
+        </div>
     );
-  }
 }
+export default BarChart

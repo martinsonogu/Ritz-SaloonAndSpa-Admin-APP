@@ -4,6 +4,7 @@ import EarnIcon from "../../../../assets/svg/earning_icon.svg"
 import BookingIcon from "../../../../assets/svg/booking_icon.svg"
 import T from "../../../../components/OverviewTitle"
 import Barchart from "./Barchart"
+import PieChart from './PieChart'
 import UpcomingApptItem from '../../../../components/UpcomingApptItem'
 
 let items = [
@@ -53,25 +54,28 @@ const Overview = () => {
         )}
         </div>
         {/* the graph */}
-          <div className='w-full flex items-center justify-center'>
+          <div className='w-full h-[450px] flex '>
             <div className='left bg-white px-4 mt-3 rounded-bg w-[70%] mr-2'>
                 <p className="text-[#4B0C67] font-semibold text-2xl pt-4 pb-10">Total Revenue</p>
                 <div className="w-full">
                 <Barchart />
                 </div>      
             </div>
-            <div className='right  bg-white px-4 mt-3 w-[30%]'>
-               Hello
+            <div className='right  bg-white px-4 mt-3 w-[30%] '>
+                <p className='text-[#4B0C67] font-semibold text-xl pt-4 pb-6'>Gender</p>
+                <div className="w-full">
+                    <PieChart />
+                </div>   
             </div>
           </div>
           {/* Payment Transaction */}
-            <div className='w-full flex items-center justify-center'>
-                <div className='left bg-white px-4 mt-3 rounded-bg w-[70%] mr-2'>
+            <div className='w-full flex mt-3'>
+                <div className='left bg-white px-4  rounded-bg w-[70%] mr-2'>
                     <p className="text-[#4B0C67] font-semibold text-2xl pt-4 pb-10">Payment Transaction</p>
                     <div className="w-full">
                     </div>      
                 </div>
-                <div className='right bg-white px-4 mt-3  w-[30%]'>
+                <div className='right bg-white px-4  w-[30%]'>
                   <p className='text-[#4B0C67] font-semibold text-xl pt-4 pb-6'>Upcoming Appointments</p>
                   {
                       items.map((item, index) =>
