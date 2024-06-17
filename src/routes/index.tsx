@@ -9,12 +9,13 @@ import Overview from "../views/Dashboard/Overview";
 import Appointment from "../views/Dashboard/SalonAndSpa/Appointment";
 import Payment from "../views/Dashboard/SalonAndSpa/Payment";
 import Update from "../views/Dashboard/SalonAndSpa/Update";
+import SalOverview from "../views/Dashboard/SalonAndSpa/Overview"
 import { useRedirect } from "../hooks";
 
 import { PRIVATE_PATHS, REGULAR_PATHS } from "./paths";
 
 export const AppRouter = () => {
-  const { OVERVIEW, HOME, APPOINTMENTS, PAYMENTS, UPDATE_SERVICES } =
+  const { OVERVIEW, HOME, APPOINTMENTS, PAYMENTS, UPDATE_SERVICES, SAL_AND_SPA_OVERVIEW } =
     PRIVATE_PATHS;
   const { FORGOT_PASSWORD, LOGIN, RESET_PASSWORD, SIGN_UP } = REGULAR_PATHS;
 
@@ -34,6 +35,8 @@ export const AppRouter = () => {
         <Route path={APPOINTMENTS} element={<Appointment />} />
         <Route path={PAYMENTS} element={<Payment />} />
         <Route path={UPDATE_SERVICES} element={<Update />} />
+        <Route path={SAL_AND_SPA_OVERVIEW} element={<SalOverview />} />
+
         {/* {put other links here} */}
       </Route>
 

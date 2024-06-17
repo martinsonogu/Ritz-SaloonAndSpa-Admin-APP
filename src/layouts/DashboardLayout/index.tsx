@@ -16,7 +16,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       <div className="w-full flex flex-col items-start overflow-auto">
         <TopBar />
 
-        <div className="flex-1 h-screen w-full py-5 px-10 ">{children}</div>
+        <div className="flex-1 h-screen w-full py-3 px-3 ">{children}</div>
       </div>
     </DashboardLayoutContainer>
   );
