@@ -39,12 +39,12 @@ export const DashboardSideNav = () => {
         {
           id: 1,
           text: "Ritz Portfolio",
-          link: PRIVATE_PATHS.APPOINTMENTS,
+          link: PRIVATE_PATHS.OVERVIEW,
         },
         {
           id: 2,
           text: "Ritz Salon & Spa",
-          link: PRIVATE_PATHS.PAYMENTS
+          link: PRIVATE_PATHS.SAL_AND_SPA_OVERVIEW
         },
         {
           id: 3,
