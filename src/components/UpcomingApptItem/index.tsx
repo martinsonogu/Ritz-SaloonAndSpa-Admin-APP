@@ -34,6 +34,21 @@ let items = [
         imgSrc: '../../assets/img/icon.png',
         name: "John Doe",
         service: "Haircut",
-        time: 
+        time: '9am - 10am',
+        price: 5000
+    }, 
+    {
+        imgSrc: '../../assets/img/icon.png',
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 15000
+    },
+    {
+        imgSrc: '../../assets/img/icon.png',
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 50000
     }
 ]
