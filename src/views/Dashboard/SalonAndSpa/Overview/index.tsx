@@ -4,6 +4,45 @@ import EarnIcon from "../../../../assets/svg/earning_icon.svg"
 import BookingIcon from "../../../../assets/svg/booking_icon.svg"
 import T from "../../../../components/OverviewTitle"
 import Barchart from "./Barchart"
+import UpcomingApptItem from '../../../../components/UpcomingApptItem'
+
+let items = [
+    {
+        imgSrc: "../../../../assets/img/icon.png",
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 5000
+    }, 
+    {
+        imgSrc: "../../../../assets/img/icon.png",
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 15000
+    },
+    {
+        imgSrc: "../../../../assets/img/icon.png",
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 50000
+    },
+    {
+        imgSrc: "../../../../assets/img/icon.png",
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 50000
+    },
+    {
+        imgSrc: "../../../../assets/img/icon.png",
+        name: "John Doe",
+        service: "Haircut",
+        time: '9am - 10am',
+        price: 50000
+    }
+]
 
 const Overview = () => {
   return (
@@ -33,7 +72,19 @@ const Overview = () => {
                     </div>      
                 </div>
                 <div className='right bg-white px-4 mt-3  w-[30%]'>
-                    Hello
+                  <p className='text-[#4B0C67] font-semibold text-xl pt-4 pb-6'>Upcoming Appointments</p>
+                  {
+                      items.map((item, index) =>
+                          < UpcomingApptItem
+                              key={index}
+                              imgSrc={item.imgSrc}
+                              name={item.name}
+                              service={item.service}
+                              price={item.price}
+                              time={item.time}
+                          />
+                      )
+                  }
                 </div>
           </div>
     </div>
