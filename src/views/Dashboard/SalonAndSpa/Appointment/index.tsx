@@ -1,7 +1,8 @@
 import React from 'react'
 import FilterIcon from "../../../../assets/svg/filter-icon.svg"
 import ResetIcon from "../../../../assets/svg/reset-icon.svg"
-import {WhiteBGContainer} from "../components/WhiteBg"
+import { WhiteBGContainer } from "../components/WhiteBg"
+import { Paginator } from '../../../../components/Paginator'
 
 const Appointment= () => {
   return (
