@@ -16,6 +16,13 @@ const services = [
 
 const Update = () => {
   const [value, setValue] = useState('');
+  const [specificServices, setSpecificServices] = useState([
+    { title: '', amount: '' },
+    { title: '', amount: '' },
+  ]);
+  const handleAddService = () => {
+    setSpecificServices([...specificServices, { title: '', amount: '' }]);
+  };
   const handleEditPricelist = (id:string) => {
     console.log(`Edit Pricelist button clicked for service with id: ${id}`);
     // Additional logic for editing the pricelist of the specific service
@@ -66,18 +73,41 @@ const Update = () => {
               Specific Service
             </h3>
             <div>
-              <div className='flex items-center justify-between mb-2'>
-              <input type="text" className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 mr-2 pl-3' placeholder='Service title' />
-              <input type="number" className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 pl-3' placeholder='Amount' />
-              </div>
-              <div className='flex items-center justify-between mb-2'>
-              <input type="text" className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 mr-2 pl-3' placeholder='Service title' />
-              <input type="number" className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 pl-3' placeholder='Amount' />
-              </div>
+              {specificServices.map((service, index) => (
+                <div
+                  key={index}
+                  className='flex items-center justify-between mb-2'
+                >
+                  <input
+                    type='text'
+                    className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 mr-2 pl-3'
+                    placeholder='Service title'
+                    value={service.title}
+                    onChange={(e) => {
+                      const updatedServices = [...specificServices];
+                      updatedServices[index].title = e.target.value;
+                      setSpecificServices(updatedServices);
+                    }}
+                  />
+                  <input
+                    type='number'
+                    className='w-full rounded-xl h-[48px] bg-[#F4F4F4] border-2 pl-3'
+                    placeholder='Amount'
+                    value={service.amount}
+                    onChange={(e) => {
+                      const updatedServices = [...specificServices];
+                      updatedServices[index].amount = e.target.value;
+                      setSpecificServices(updatedServices);
+                    }}
+                  />
+                </div>
+              ))}
               <div className='flex justify-end'>
-                <button className='h-[40px] w-[95px] border-2 border-[#EFEFEF] rounded-md flex items-center justify-center'>
-                <img src={PlusIcon} alt="" className='mr-2' />
-                <p className='font-bold text-sm text-[#9A9FA5]'>Add</p>
+                <button
+                  onClick={handleAddService}
+                  className='h-[40px] w-[95px] border-2 border-[#EFEFEF] rounded-md flex items-center justify-center'>
+                  <img src={PlusIcon} alt="" className='mr-2' />
+                  <p className='font-bold text-sm text-[#9A9FA5]'>Add</p>
                 </button>
               </div>
             </div>
