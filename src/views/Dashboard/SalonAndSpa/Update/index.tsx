@@ -9,19 +9,19 @@ import ServiceImg from '../../../../assets/img/Link.png'
 
 
 const services = [
-    { id: 1, title: "Facials Treatment", image: ServiceImg },
-    { id: 2, title: "Massage Therapy", image: ServiceImg },
-    // Add more services as needed
+    { id: "1", title: "Facials Treatment", image: ServiceImg },
+  { id: "2", title: "Massage Therapy", image: ServiceImg },
+    { id: "2", title: "Hair Twisting", image: ServiceImg },
   ];
 
 const Update = () => {
   const [value, setValue] = useState('');
-  const handleEditPricelist = (id) => {
+  const handleEditPricelist = (id:string) => {
     console.log(`Edit Pricelist button clicked for service with id: ${id}`);
     // Additional logic for editing the pricelist of the specific service
   };
 
-  const handleDeleteService = (id) => {
+  const handleDeleteService = (id:string) => {
     console.log(`Delete button clicked for service with id: ${id}`);
     // Additional logic for deleting the specific service
   };
