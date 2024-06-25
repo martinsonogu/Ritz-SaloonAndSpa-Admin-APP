@@ -4,6 +4,7 @@ import PlusIcon from "../../../../assets/svg/plus-icon.svg"
 import {UploadInput} from "../../../../components/uploadInput"
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import Services from './Services'
 
 
 const Update = () => {
@@ -83,7 +84,20 @@ const Update = () => {
               {/* <button className='flex items-center justify-center'>
 
               </button> */}
-              </div>
+            </div>
+          </div>
+          <h3 className='text-[#4B0C67] text-2xl font-semibold leading-6 mb-6 mt-12'>
+          Edit Services
+          </h3>
+          <div className='container w-full bg-white rounded-lg'>
+            <div className='top border-b-[#D5D5D5] border-b-2 h-[50px] mb-2'>
+              Hello
+            </div>
+            <div className='bottom pb-8'>
+              <Services />
+              <Services />
+              <Services/>
+            </div>
           </div>
 
         </div>
