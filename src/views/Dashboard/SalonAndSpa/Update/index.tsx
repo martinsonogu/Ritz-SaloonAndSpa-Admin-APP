@@ -49,7 +49,7 @@ const Update = () => {
             <h3 className='text-[#33383F] font-semibold text-sm mb-3'>
               Product title
             </h3>
-            <input type="text" className='w-full rounded-xl h-[48px] bg-white border-2' />
+            <input type="text" className='w-full rounded-xl h-[48px] px-4 bg-white border-2' />
           </div>
           <div className='mt-[32px]'>
             <h3 className='text-[#33383F] font-semibold text-sm mb-3'>
@@ -108,8 +108,12 @@ const Update = () => {
           Edit Services
           </h3>
           <div className='container w-full bg-white rounded-lg'>
-            <div className='top border-b-[#D5D5D5] border-b-2 h-[50px] mb-2'>
-              Hello
+            <div className='top border-b-[#D5D5D5] border-b-2 h-[50px] mb-2 flex items-center pl-28'>
+              <div className='flex items-center mr-28'>
+                <p className='font-bold text-sm text-[#202224] mr-28'>Image</p>
+                <p className='font-bold text-sm text-[#202224]'>Category</p>
+              </div>
+              <p className='font-bold text-sm text-[#202224]'>Action</p>
             </div>
             <div className='bottom pb-8'>
               {services.map(service => (
