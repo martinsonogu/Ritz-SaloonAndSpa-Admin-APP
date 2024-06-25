@@ -5,10 +5,28 @@ import {UploadInput} from "../../../../components/uploadInput"
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Services from './Services'
+import ServiceImg from '../../../../assets/img/Link.png'
 
+
+const services = [
+    { id: 1, title: "Facials Treatment", image: ServiceImg },
+    { id: 2, title: "Massage Therapy", image: ServiceImg },
+    // Add more services as needed
+  ];
 
 const Update = () => {
   const [value, setValue] = useState('');
+  const handleEditPricelist = (id) => {
+    console.log(`Edit Pricelist button clicked for service with id: ${id}`);
+    // Additional logic for editing the pricelist of the specific service
+  };
+
+  const handleDeleteService = (id) => {
+    console.log(`Delete button clicked for service with id: ${id}`);
+    // Additional logic for deleting the specific service
+  };
+
+  
   return (
     <div className='mt-5 ml-5'>
       <h3 className='text-[#4B0C67] text-2xl font-semibold leading-6 mb-[20px]'>
@@ -94,9 +112,16 @@ const Update = () => {
               Hello
             </div>
             <div className='bottom pb-8'>
-              <Services />
-              <Services />
-              <Services/>
+              {services.map(service => (
+                <Services
+                  key={service.id}
+                  id={service.id}
+                  title={service.title}
+                  image={service.image}
+                  onEdit={handleEditPricelist}
+                  onDelete={handleDeleteService}
+                />
+              ))}
             </div>
           </div>
 
